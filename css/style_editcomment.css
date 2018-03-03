@@ -1,0 +1,390 @@
+@import "fonts/fontface.css";
+/* =================== Getting the new tags to behave START ====================== */
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {
+	display: block;
+}
+mark, rp, rt, ruby, summary, time {
+	display: inline
+}
+/* ==================== Getting the new tags to behave END ======================= */
+
+
+/* ========================= Global properties START ============================= */
+html, body {
+	height:100%;
+}
+html {
+	min-width:990px;
+}
+body {
+	background-color:#000000;
+	font-family: 'Lobster', cursive;
+	font-size:12px;
+	line-height:18px;
+	color:#333333;
+}
+div {
+	border: 0 none;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: top;
+}
+dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,article,p { margin-bottom: 20px;  }
+h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,article,p { font-family: 'Old Standard TT', serif; font-weight: bold;}
+h1 {
+	font-size:40px;	
+	line-height:40px;
+	font-family: 'Lobster', cursive;
+	letter-spacing:-1px;		
+}
+h2 {
+	font-size:32px;	
+	line-height:32px;	
+}
+h3 {	
+	font-size:24px;
+	line-height:28px;		
+}
+h4 {	
+	font-size:18px;	
+	line-height:18px;	
+}
+h5 {
+	font-size:14px;	
+	line-height:18px;
+}
+h6 {
+	font-size:13px;
+	line-height:18px;
+	
+}
+p {
+	line-height:18px;
+	
+}
+.color_orange {
+	color:#ee6b26;
+}
+.color_grey {
+	color:#333333;
+}
+.color_black {
+	color:#000000;
+}
+.color_white {
+	color:#ffffff;
+}
+
+
+/* ========================= Global properties END =============================== */
+
+
+/* ========================= Global Structure START ============================== */
+#maincontainer {
+	width:100%;
+	position:fixed;	
+	height:100%;
+	margin:0 auto;	
+	z-index:1;
+	overflow:hidden;
+}
+#slideshow {
+    position:fixed;
+    height:100%;
+	opacity:0.7;
+	
+}
+
+#slideshow IMG {
+    position:fixed;
+    top:0;
+    z-index:8;
+    opacity:0.0;
+	
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+
+#main {
+	width:990px;
+	margin:0 auto;
+	position:relative;
+	height:700px;
+	
+}
+/* ========================= Global Structure END ================================ */
+
+/* ============================== header START =================================== */
+header {
+	margin:60px auto;
+	position:relative;
+	height:auto;
+	z-index:222;
+}
+header a {
+	text-decoration:none;
+}
+header #logo h1 {
+	font-size:150px;
+	font-weight:normal;
+	text-decoration:none;
+	text-shadow:3px 3px 5px #000000;
+	text-align:center;
+	font-family: 'Lobster', cursive;
+	line-height:50px;
+	margin-bottom:50px;
+}
+header .slogan {
+	text-shadow:3px 3px 5px #000000;
+	text-align:center;
+	font-size:40px;
+	line-height:40px;
+	font-family: 'Lobster', cursive;
+	margin-bottom: 70px;
+}
+/* =============================== header END ==================================== */
+
+/* ============================== main START ==================================== */
+
+#slider {
+	width:680px;
+	height:459px;	
+	background:url(../images/loading.gif) no-repeat 50% 50%;
+	position:relative;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+		
+	
+}
+#slider a {
+	border:0;
+	display:block;
+	
+	
+	
+}
+.nivo-controlNav {
+	position:absolute;
+	left:260px;
+	bottom:-42px;
+}
+.nivo-controlNav a {
+	display:block;
+	width:18px;
+	height:18px;
+	background:url(../images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:0px;
+	float:left;
+	left:320px;
+	bottom:60px;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-directionNav a {
+	position:absolute;
+	top:206px;
+	z-index:99;
+	cursor:pointer;
+	width:48px;
+	height:48px;
+	text-indent: -500px;
+	overflow:hidden;
+	background: url(../images/slider_arrows.png) top left no-repeat;
+}
+
+
+
+.nivo-prevNav {
+	left:10px;
+}
+
+.nivo-prevNav:hover{
+	background-position: 0 -48px !important;
+}
+
+.nivo-nextNav {
+	right:10px;
+	background-position: -48px 0 !important;
+}
+.nivo-nextNav:hover{
+	background-position: -48px -48px !important;
+}
+
+/* ============================== main END ==================================== */
+
+/* ============================== Scroll Pane START ==================================== */
+
+.scroll-pane {
+	width: 610px;
+	overflow: auto;
+	float: left;
+	padding-right:20px;
+	
+}
+
+
+#pane1, #pane2, #pane3 {
+	height: 330px;
+}
+
+/* ============================== Scroll Pane END ==================================== */
+
+/* ============================ footer START ===================================== */
+footer {
+	height:auto;
+	width:100%;
+	float:left;
+	padding:15px 0px 15px 0px;
+	position:relative;
+	z-index:1111111;
+
+}
+footer a {
+	color:#ffffff;
+	font-weight: bold;
+	font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 18px;
+}
+footer .privacy {
+	color:#ffffff;
+	font-size: 16px;
+	font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+	text-align:center;
+	margin-left:-40px;
+}
+
+#textarea {
+	float:left;
+	margin:0 auto;
+	border:none;
+	padding:14px 18px;
+	color:#333333;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	position:relative;
+	width:550px;
+	outline:none;
+	font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+	font-size:15px;
+	margin-left: 200px;
+	margin-bottom: 30px;
+	font-size:15px;
+	color:#333333;
+	box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-khtml-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-moz-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-ms-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-o-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-webkit-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	padding:12px 10px 12px 10px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background-color:#eeeeee;
+	font-family: 'Old Standard TT', serif; 
+	font-weight: bold;
+	-moz-transition:all 0.3s linear;
+	-webkit-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	-ms-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+}
+#textarea:hover {
+	background:#686661;
+	color:#ffffff;
+}
+#textarea {
+	height:100px;
+	overflow:auto;
+	resize:none;
+}
+input[type="submit"] {
+	width:90px;
+	margin:3px;
+	border:none;
+	color:#333333;
+}
+input[type="submit"]:hover {
+	
+	color:#000000;
+}
+.button, input[type="submit"] {
+	font-size:15px;
+	color:#333333;
+	box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-khtml-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-moz-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-ms-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-o-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-webkit-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	padding:12px 10px 12px 10px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background-color:#eeeeee;
+	font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+	-moz-transition:all 0.3s linear;
+	-webkit-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	-ms-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+	cursor:pointer;
+	margin-left: 25px;
+}
+.button:hover, input[type="submit"]:hover {
+	box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-khtml-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-moz-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-ms-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-o-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-webkit-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	background-color:#ffffff;
+	-moz-transition:all 0.3s linear;
+	-webkit-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	-ms-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+	color:#000000;
+}
+.button a {
+	font-size:16px;
+	color:#333333;
+	text-decoration:none;
+}
+.button a:hover {
+	color:#000000;
+}
+
+/* ============================= footer END ====================================== */
